@@ -54,20 +54,20 @@ export const Home = () => {
 				<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 					<div className="accordion-body">
 						<div className="card-container">
-						<div className="card-container row">
-							{store.characters.map((character, index) => (
-								<div key={index} className="card col-4">
-									<h2>{character.name}</h2>
-									<img
-										src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
-										alt={character.name}
-									/>
-									<p>Birth Year: {character.birth_year}</p>
-									<p>Gender: {character.gender}</p>
-									<p>Height: {character.height}</p>
-									<p>Mass: {character.mass}</p>
-								</div>
-							))}
+							<div className="card-container row">
+								{store.characters.map((character, index) => (
+									<div key={index} className="card col-4">
+										<h2>{character.name}</h2>
+										<img
+											src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
+											alt={character.name}
+										/>
+										<p>Birth Year: {character.birth_year}</p>
+										<p>Gender: {character.gender}</p>
+										<p>Height: {character.height}</p>
+										<p>Mass: {character.mass}</p>
+									</div>
+								))}
 							</div>
 						</div>
 					</div>
@@ -81,29 +81,27 @@ export const Home = () => {
 				</h2>
 				<div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 					<div className="accordion-body">
-					<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-					<div className="accordion-body">
 						<div className="card-container">
-						<div className="card-container row">
-							{store.vehicles.map((vehicle, index) => (
-								<div key={index} className="card col-4">
-									<h2>{vehicle.name}</h2>
-									<img
-										src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`}
-										alt={vehicle.name}
-									/>
-									<p>Model: {vehicle.model}</p>
-									<p>Manofacturer: {vehicle.manufacturer}</p>
-								</div>
-							))}
+							<div className="card-container row">
+								{store.vehicles.map((vehicle, index) => (
+									<div key={index} className="card col-4">
+										<h2>{vehicle.name}</h2>
+										<img
+											src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`}
+											alt={vehicle.name}
+										/>
+										<p>Model: {vehicle.model}</p>
+										<p>Manofacturer: {vehicle.manufacturer}</p>
+									</div>
+								))}
 							</div>
 						</div>
 					</div>
 				</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
+		
+			</div >
+		</div >
 
 
 

@@ -8,7 +8,11 @@ export const Single = props => {
 	const params = useParams();
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+			<figure class="figure">
+				<img src={`https://starwars-visualguide.com/assets/img/planets/${store.planets[params.theid].index + 1}.jpg`} class="figure-img img-fluid rounded" alt="..."/>
+					<figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+			</figure>
+			<h1 className="display-4">This will show the demo element: {store.planets[params.theid].population}</h1>
 
 			<hr className="my-4" />
 

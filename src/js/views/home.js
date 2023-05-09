@@ -19,16 +19,16 @@ export const Home = () => {
 						Planetas
 					</button>
 				</h2>
-				<div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				<div id="collapseOne" className="accordion-collapse collapse show container-fluid" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					<div className="accordion-body">
 						<div className="container">
 							<div className="card-container row">
 								{store.planets.map((planet, index) => (
-									<div key={index} className="card col-4 ">
+									<div key={index} className="card col-2 m-2">
 										<h2>{planet.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
-											alt={planet.name} width="250"
+											alt={planet.name} width="200"
 										/>
 										<p>Population: {planet.population}</p>
 										<p>Climate: {planet.climate}</p>
@@ -56,11 +56,11 @@ export const Home = () => {
 						<div className="card-container">
 							<div className="card-container row">
 								{store.characters.map((character, index) => (
-									<div key={index} className="card col-4">
+									<div key={index} className="card col-2 m-2">
 										<h2>{character.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
-											alt={character.name}
+											alt={character.name} width="200"
 										/>
 										<p>Birth Year: {character.birth_year}</p>
 										<p>Gender: {character.gender}</p>
@@ -84,11 +84,11 @@ export const Home = () => {
 						<div className="card-container">
 							<div className="card-container row">
 								{store.vehicles.map((vehicle, index) => (
-									<div key={index} className="card col-4">
+									<div key={index} className="card col-2 m-2">
 										<h2>{vehicle.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`}
-											alt={vehicle.name}
+											alt={vehicle.name} width="200"
 										/>
 										<p>Model: {vehicle.model}</p>
 										<p>Manofacturer: {vehicle.manufacturer}</p>

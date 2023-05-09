@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext"
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 	const [planets, setPlanets] = useState([]);
@@ -24,19 +25,23 @@ export const Home = () => {
 						<div className="container">
 							<div className="card-container row">
 								{store.planets.map((planet, index) => (
-									<div key={index} className="card col-2 m-2">
+									<div key={index} className="card col-2 m-2 heigth-200">
 										<h2>{planet.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
 											alt={planet.name} width="200"
 										/>
+
 										<p>Population: {planet.population}</p>
 										<p>Climate: {planet.climate}</p>
 										<p>Gravity: {planet.gravity}</p>
 										<p>Terrain: {planet.terrain}</p>
+										<br></br>
 										<div>
-											<button type="button" className="btn btn-outline-primary btn-sm w-20px">Primary</button>
-											<button type="button" className="btn btn-outline-warning">Warning</button>
+											<Link to={"/single/" + index}>
+												<span className="position-absolute bottom-0 start-0">Learn More!</span>
+											</Link>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
 										</div>
 									</div>
 								))}
@@ -98,8 +103,8 @@ export const Home = () => {
 						</div>
 					</div>
 				</div>
-		
-		
+
+
 			</div >
 		</div >
 

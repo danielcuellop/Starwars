@@ -6,10 +6,12 @@ import { Context } from "../store/appContext";
 export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
+	const idNumber = parseInt(params.theid);
+	console.log(idNumber, "<<<<<<<< Esto")
 	return (
 		<div className="jumbotron">
 			<figure class="figure">
-				<img src={`https://starwars-visualguide.com/assets/img/planets/${store.planets[params.theid].index + 1}.jpg`} class="figure-img img-fluid rounded" alt="..."/>
+				<img src={`https://starwars-visualguide.com/assets/img/planets/${idNumber + 1}.jpg`} class="figure-img img-fluid rounded" alt="..."/>
 					<figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
 			</figure>
 			<h1 className="display-4">This will show the demo element: {store.planets[params.theid].population}</h1>

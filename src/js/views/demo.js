@@ -14,7 +14,6 @@ export const Demo = () => {
 				{store.planets.map((planets, index) => {
 					return (
 						<li
-							key={index}
 							className="list-group-item d-flex justify-content-between">
 							<Link to={"/single/" + index}>
 								<span>Link to: {planets.name}</span>

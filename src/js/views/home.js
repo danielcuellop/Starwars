@@ -20,12 +20,12 @@ export const Home = () => {
 						Planetas
 					</button>
 				</h2>
-				<div id="collapseOne" className="accordion-collapse collapse show container-fluid" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-					<div className="accordion-body">
-						<div className="container">
-							<div className="card-container row">
+				<div id="collapseOne" className="accordion-collapse collapse show container-fluid bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div className="accordion-body bg-dark">
+						<div className="container m-4">
+							<div className="card-container row bg-dark text-warning">
 								{store.planets.map((planet, index) => (
-									<div key={index} className="card col-2 m-2 heigth-200">
+									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
 										<h2>{planet.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`}
@@ -39,7 +39,7 @@ export const Home = () => {
 										<br></br>
 										<div>
 											<Link to={"/single/" + index}>
-												<span className="position-absolute bottom-0 start-0">Learn More!</span>
+												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
 											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
 										</div>
@@ -71,6 +71,13 @@ export const Home = () => {
 										<p>Gender: {character.gender}</p>
 										<p>Height: {character.height}</p>
 										<p>Mass: {character.mass}</p>
+										<br></br>
+										<div>
+											<Link to={"/personaje/" + index}>
+												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
+											</Link>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+										</div>
 									</div>
 								))}
 							</div>

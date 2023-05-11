@@ -22,6 +22,18 @@ export const Demo = () => {
 					);
 				})}
 			</ul>
+			<ul className="list-group">
+				{store.characters.map((characters, index) => {
+					return (
+						<li
+							className="list-group-item d-flex justify-content-between">
+							<Link to={"/personaje/" + index}>
+								<span>Link to: {characters.name}</span>
+							</Link>
+						</li>
+					);
+				})}
+			</ul>
 			<br />
 			<Link to="/">
 				<button className="btn btn-primary">Back home</button>

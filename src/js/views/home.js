@@ -57,11 +57,11 @@ export const Home = () => {
 					</button>
 				</h2>
 				<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-					<div className="accordion-body">
-						<div className="card-container">
-							<div className="card-container row">
+				<div className="accordion-body bg-dark">
+						<div className="container m-4">
+							<div className="card-container row bg-dark text-warning">
 								{store.characters.map((character, index) => (
-									<div key={index} className="card col-2 m-2">
+									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
 										<h2>{character.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
@@ -99,11 +99,18 @@ export const Home = () => {
 									<div key={index} className="card col-2 m-2">
 										<h2>{vehicle.name}</h2>
 										<img
-											src={`https://starwars-visualguide.com/assets/img/vehicles/${index + 1}.jpg`}
+											src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
 											alt={vehicle.name} width="200"
 										/>
 										<p>Model: {vehicle.model}</p>
 										<p>Manofacturer: {vehicle.manufacturer}</p>
+										<br></br>
+										<div>
+											<Link to={"/vehicles/" + vehicle.uid}>
+												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
+											</Link>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+										</div>
 									</div>
 								))}
 							</div>

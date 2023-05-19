@@ -13,14 +13,14 @@ export const Home = () => {
 	console.log(store.vehicles, "Vehicles")
 
 	return (
-		<div className="accordion" id="accordionExample">
-			<div className="accordion-item">
-				<h2 className="accordion-header" id="headingOne">
-					<button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		<div className="accordion bg-dark text-warning" id="accordionExample">
+			<div className="accordion-item bg-dark text-warning">
+				<h2 className="accordion-header bg-dark text-warning container" id="headingOne">
+					<button className="accordion-button bg-dark text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
 						Planetas
 					</button>
 				</h2>
-				<div id="collapseOne" className="accordion-collapse collapse show container-fluid bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+				<div id="collapseOne" className="accordion-collapse collapse  container-fluid bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					<div className="accordion-body bg-dark">
 						<div className="container m-4">
 							<div className="card-container row bg-dark text-warning">
@@ -50,9 +50,9 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="accordion-item">
-				<h2 className="accordion-header" id="headingTwo">
-					<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			<div className="accordion-item bg-dark">
+				<h2 className="accordion-header container" id="headingTwo">
+					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 						Personajes
 					</button>
 				</h2>
@@ -85,18 +85,18 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
-			<div className="accordion-item">
-				<h2 className="accordion-header" id="headingThree">
-					<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<div className="accordion-item bg-dark">
+				<h2 className="accordion-header container" id="headingThree">
+					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 						Vehiculos
 					</button>
 				</h2>
 				<div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-					<div className="accordion-body">
-						<div className="card-container">
-							<div className="card-container row">
+				<div className="accordion-body bg-dark">
+						<div className="container m-4">
+							<div className="card-container row bg-dark text-warning">
 								{store.vehicles.map((vehicle, index) => (
-									<div key={index} className="card col-2 m-2">
+									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
 										<h2>{vehicle.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}

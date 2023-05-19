@@ -42,7 +42,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.error(error));
 			},
 			loadVehicles: () => {
-				fetch("https://www.swapi.tech/api/vehicles")
+				fetch("https://www.swapi.tech/api/vehicles?page=1&limit=100")
 					.then(response => response.json())
 					.then(data => setStore({vehicles: data.results}))
 					.catch(error => console.error(error));

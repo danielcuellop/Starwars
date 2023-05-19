@@ -8,11 +8,36 @@ export const Personaje = props => {
 	const params = useParams();
 	const idNumber = parseInt(params.theid);
 	console.log(idNumber, "<<<<<<<< Esto")
+	
+		
 	return (
-		<div className="jumbotron">
-			<figure class="figure">
-				<img src={`https://starwars-visualguide.com/assets/img/characters/${idNumber + 1}.jpg`} class="figure-img img-fluid rounded" alt="..." />
-				<figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+		<div className="jumbotron position-relative container ">
+			<figure class="figure row justify-content-center">
+				<figcaption className="figure-caption text-warning fs-1 text-center">Name: {store.characters[params.theid].name}</figcaption>
+				<img src={`https://starwars-visualguide.com/assets/img/characters/${idNumber + 1}.jpg`} class="figure-img img-fluid rounded col-5" alt="..." />
+				<div className="text-warning col-3">
+					<br></br>
+					<br></br>
+					Height: {store.characters[params.theid].height}
+					<br></br>
+					<br></br>
+					Mass: {store.characters[params.theid].mass}
+					<br></br>
+					<br></br>
+					Hair Color: {store.characters[params.theid].hair_color}
+					<br></br>
+					<br></br>
+					Skin Color: {store.characters[params.theid].skin_color}
+					<br></br>
+					<br></br>
+					Gender: {store.characters[params.theid].gender}
+					<br></br>
+					<br></br>
+					Eye Color: {store.characters[params.theid].eye_color}
+					<br></br>
+					<br></br>
+				
+				</div>
 			</figure>
 			<h1 className="display-4">This will show the demo element: {store.characters[params.theid].name}</h1>
 
@@ -28,6 +53,7 @@ export const Personaje = props => {
 
 	);
 };
+
 
 Personaje.propTypes = {
 	match: PropTypes.object

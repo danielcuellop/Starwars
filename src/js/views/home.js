@@ -4,15 +4,29 @@ import { Context } from "../store/appContext"
 import { Link } from "react-router-dom";
 import { Favorites, favorites } from "../component/navbar";
 
+
 export const Home = () => {
 	const [planets, setPlanets] = useState([]);
 	const { store, actions } = useContext(Context)
 	const [characters, setCharacters] = useState([]);
 	const [vehicles, setVehicles] = useState([]);
+	const [favorites, setFavorites] = useState([]);
+
 	console.log(store.planets, "planets")
 	console.log(store.characters, "characters")
 	console.log(store.vehicles, "Vehicles")
 
+	function addFavorite(item) {
+		// Crear una copia del estado de favoritos actual
+		let newFavorites = [...favorites];
+	  
+		// Añadir el nuevo ítem
+		newFavorites.push(item);
+	  
+		// Actualizar el estado
+		setFavorites(newFavorites);
+	  }
+	  
 	return (
 		<div className="accordion bg-dark text-warning" id="accordionExample">
 			<div className="accordion-item bg-dark text-warning">
@@ -23,8 +37,8 @@ export const Home = () => {
 				</h2>
 				<div id="collapseOne" className="accordion-collapse collapse  container-fluid bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 					<div className="accordion-body bg-dark">
-						<div className="container m-4">
-							<div className="card-container row bg-dark text-warning">
+						<div className="container">
+						<div className="card-container row bg-dark text-warning justify-content-center">
 								{store.planets.map((planet, index) => (
 									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
 										<h2>{planet.name}</h2>
@@ -42,7 +56,8 @@ export const Home = () => {
 											<Link to={"/single/" + index}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index,"planets")}>♡</button>
 										</div>
 									</div>
 								))}
@@ -59,7 +74,7 @@ export const Home = () => {
 				</h2>
 				<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 				<div className="accordion-body bg-dark">
-						<div className="container m-4">
+						<div className="container">
 							<div className="card-container row bg-dark text-warning">
 								{store.characters.map((character, index) => (
 									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
@@ -80,7 +95,7 @@ export const Home = () => {
 											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
 										</div>
 									</div>
-								))}
+								))}  
 							</div>
 						</div>
 					</div>
@@ -94,7 +109,7 @@ export const Home = () => {
 				</h2>
 				<div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 				<div className="accordion-body bg-dark">
-						<div className="container m-4">
+						<div className="container">
 							<div className="card-container row bg-dark text-warning">
 								{store.vehicles.map((vehicle, index) => (
 									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">

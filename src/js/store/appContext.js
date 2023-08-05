@@ -11,6 +11,7 @@ const injectContext = PassedComponent => {
 		//this will be passed as the contenxt value
 		const [state, setState] = useState(
 			getState({
+				favorites:[], 
 				getStore: () => state.store,
 				getActions: () => state.actions,
 				setStore: updatedStore =>
@@ -19,7 +20,27 @@ const injectContext = PassedComponent => {
 						actions: { ...state.actions }
 					})
 			})
+			
 		);
+		const actions = {
+			// other actions...
+			addFavorite: (item) => {
+				const storeCopy = {...store};
+				if (!storeCopy.favorites.includes(item)) {
+					storeCopy.favorites.push(item);
+					setStore(storeCopy);
+				}
+			},
+			deleteFavorite: (index) => {
+				const storeCopy = {...store};
+				storeCopy.favorites.splice(index, 1);
+				setStore(storeCopy);
+			}
+		};
+	
+		
+		
+		
 
 		useEffect(() => {
 			/**

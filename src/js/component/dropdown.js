@@ -7,7 +7,13 @@ function BasicButtonExample() {
     const { store, actions } = useContext(Context);
 
     return (
-        <DropdownButton id="dropdown-basic-button" title={`Favoritos ${store.favorites.length}`} >
+        <DropdownButton 
+        id="dropdown-basic-button" 
+        title={`Favoritos ${store.favorites.length}`} 
+        style={{ 
+            backgroundColor: 'black', 
+            color: 'yellow'
+        }}>
             {
                 store.favorites.map((item, index) => (
                     <Dropdown.Item href="#/action-1">

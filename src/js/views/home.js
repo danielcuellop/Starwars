@@ -28,6 +28,7 @@ export const Home = () => {
 	  }
 	  
 	return (
+		<div style={{ maxHeight: '70vh', overflowY: 'scroll' }}>
 		<div className="accordion bg-dark text-warning" id="accordionExample">
 			<div className="accordion-item bg-dark text-warning">
 				<h2 className="accordion-header bg-dark text-warning container" id="headingOne">
@@ -66,6 +67,7 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
+			</div>
 			<div className="accordion-item bg-dark">
 				<h2 className="accordion-header container" id="headingTwo">
 					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -92,7 +94,8 @@ export const Home = () => {
 											<Link to={"/personaje/" + index}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index,"characters")}>♡</button>
+
 										</div>
 									</div>
 								))}  
@@ -125,7 +128,7 @@ export const Home = () => {
 											<Link to={"/vehicles/" + vehicle.uid}>
 												<span className="position-absolute bottom-0 start-0 m-1">Learn More!</span>
 											</Link>
-											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0">♡</button>
+											<button type="button" className="btn btn-outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index,"vehicles")}>♡</button>
 										</div>
 									</div>
 								))}

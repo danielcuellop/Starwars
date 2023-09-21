@@ -71,7 +71,7 @@ export const Home = () => {
 			<div className="accordion-item bg-dark">
 				<h2 className="accordion-header container" id="headingTwo">
 					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Personajes
+						Personajes 
 					</button>
 				</h2>
 				<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -79,7 +79,7 @@ export const Home = () => {
 						<div className="container">
 							<div className="card-container row bg-dark text-warning">
 								{store.characters.map((character, index) => (
-									<div key={index} className="card col-2 m-3 heigth-200 bg-dark border border-warning">
+									<div key={index} className="card col-2 m-3 heigth-180 bg-dark border border-warning">
 										<h2>{character.name}</h2>
 										<img
 											src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}

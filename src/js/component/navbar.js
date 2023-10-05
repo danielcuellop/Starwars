@@ -19,6 +19,9 @@ export const Navbar = () => {
                     <li className="nav-item">
                         <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Personajes</a>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Vehiculos</a>
+                    </li>
                 </ul>
             </div>
             <div className="ml-auto">

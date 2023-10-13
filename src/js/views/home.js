@@ -48,10 +48,10 @@ export const Home = () => {
 											alt={planet.name} width="200"
 										/>
 
-										<p>Population: {planet.population}</p>
-										<p>Climate: {planet.climate}</p>
-										<p>Gravity: {planet.gravity}</p>
-										<p>Terrain: {planet.terrain}</p>
+										<p>Poblacion: {planet.population}</p>
+										<p>Clima: {planet.climate}</p>
+										<p>Gravedad: {planet.gravity}</p>
+										<p>Terreno: {planet.terrain}</p>
 										<br></br>
 										<div>
 											<Link to={"/single/" + index}>

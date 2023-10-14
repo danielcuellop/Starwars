@@ -9,7 +9,7 @@ function BasicButtonExample() {
     return (
         <DropdownButton 
         id="dropdown-basic-button" 
-        title={`Favoritos ${store.favorites.length}`} 
+        title={`Favorites ${store.favorites.length}`} 
         style={{ 
             backgroundColor: 'black', 
             color: 'yellow'
@@ -18,7 +18,7 @@ function BasicButtonExample() {
                 store.favorites.map((item, index) => (
                     <Dropdown.Item href="#/action-1">
                         {item.name}
-                        <button onClick={() => actions.deleteFavorite(index)}>Eliminar</button>
+                        <button onClick={() => actions.deleteFavorite(index)}>Delete</button>
                     </Dropdown.Item>
                 ))
             }

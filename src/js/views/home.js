@@ -33,7 +33,7 @@ export const Home = () => {
 			<div className="accordion-item bg-dark text-warning">
 				<h2 className="accordion-header bg-dark text-warning container" id="headingOne">
 					<button className="accordion-button bg-dark text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-						Planetas
+						Planets
 					</button>
 				</h2>
 				<div id="collapseOne" className="accordion-collapse collapse  container-fluid bg-dark" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -48,10 +48,10 @@ export const Home = () => {
 											alt={planet.name} width="200"
 										/>
 
-										<p>Poblacion: {planet.population}</p>
-										<p>Clima: {planet.climate}</p>
-										<p>Gravedad: {planet.gravity}</p>
-										<p>Terreno: {planet.terrain}</p>
+										<p>Population: {planet.population}</p>
+										<p>Climate: {planet.climate}</p>
+										<p>Gravity: {planet.gravity}</p>
+										<p>Terrain: {planet.terrain}</p>
 										<br></br>
 										<div>
 											<Link to={"/single/" + index}>
@@ -71,7 +71,7 @@ export const Home = () => {
 			<div className="accordion-item bg-dark">
 				<h2 className="accordion-header container" id="headingTwo">
 					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						Personajes 
+						Characters
 					</button>
 				</h2>
 				<div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -107,7 +107,7 @@ export const Home = () => {
 			<div className="accordion-item bg-dark">
 				<h2 className="accordion-header container" id="headingThree">
 					<button className="accordion-button collapsed text-warning bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						Vehiculos
+						Vehicles
 					</button>
 				</h2>
 				<div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">

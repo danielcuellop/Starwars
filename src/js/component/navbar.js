@@ -14,13 +14,13 @@ export const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Planetas</a>
+                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Planets</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Personajes</a>
+                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Characters</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Vehiculos</a>
+                        <a className="nav-link active m-2" aria-current="page" href="#" style={{ fontSize: '24px', color: "yellow" }}>Vehicles</a>
                     </li>
                 </ul>
             </div>

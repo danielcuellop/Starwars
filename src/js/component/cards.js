@@ -28,16 +28,16 @@ export const Home = () => {
                                     <Card.Body>
                                         <Card.Title>{planet.name}</Card.Title>
                                         <Card.Text>
-                                            Población: {planet.population}
+                                            Population: {planet.population}
                                             <br />
-                                            Clima: {planet.climate}
+                                            Climate: {planet.climate}
                                             <br />
-                                            Gravedad: {planet.gravity}
+                                            Gravity: {planet.gravity}
                                             <br />
-                                            Terreno: {planet.terrain}
+                                            Terrain: {planet.terrain}
                                         </Card.Text>
                                         <Link to={"/single/" + index}>
-                                            <Button variant="primary">Ver Mas!</Button>
+                                            <Button variant="primary">See More!</Button>
                                         </Link>
                                         <Button variant="outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index, "planets")}>♡</Button>
                                     </Card.Body>

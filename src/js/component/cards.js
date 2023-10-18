@@ -19,7 +19,7 @@ export const Home = () => {
         <div className="container">
             
                 <div className="col">
-                    <h2>Planetas</h2>
+                    <h2>Planets</h2>
                     <div className="row">
                         {store.planets.map((planet, index) => (
                             <div key={index} className="col-3">
@@ -37,7 +37,7 @@ export const Home = () => {
                                             Terrain: {planet.terrain}
                                         </Card.Text>
                                         <Link to={"/single/" + index}>
-                                            <Button variant="primary">See More!</Button>
+                                            <Button variant="primary">Learn More!</Button>
                                         </Link>
                                         <Button variant="outline-warning position-absolute bottom-0 end-0" onClick={e => actions.agregarFavoritos(index, "planets")}>♡</Button>
                                     </Card.Body>
@@ -48,7 +48,7 @@ export const Home = () => {
                 </div>
 
                 <div className="col">
-                    <h2>Personajes</h2>
+                    <h2>Characters</h2>
                     <div className="row">
                         {store.characters.map((character, index) => (
                             <div key={index} className="col-3">
@@ -77,7 +77,7 @@ export const Home = () => {
                 </div>
 
                 <div className="col">
-                    <h2>Vehículos</h2>
+                    <h2>Vehicles</h2>
                     <div className="row">
                         {store.vehicles.map((vehicle, index) => (
                             <div key={index} className="col-3">
